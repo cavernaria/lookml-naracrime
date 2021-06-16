@@ -28,8 +28,7 @@ explore: aim_automat {
   label: "自動販売機ねらい"
 }
 
-explore: error_okosuze {
-  from: aim_parts
+explore: aim_parts {
   label: "部品ねらい"
 }
 
