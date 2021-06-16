@@ -27,7 +27,7 @@ view: basic_info {
        ;;
   }
 
-  dimension: deception_error {
+  dimension: deception {
     label: "手口"
     type: string
     sql: ${TABLE}."deception" ;;

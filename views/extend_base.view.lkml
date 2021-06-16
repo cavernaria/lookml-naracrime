@@ -62,7 +62,7 @@ view: extend_base {
     sql: ${TABLE}."Longitude" ;;
   }
 
-  dimension: location {
+  dimension: location_error {
     label: "発生場所"
     type: location
     sql_latitude: ${latitude} ;;
