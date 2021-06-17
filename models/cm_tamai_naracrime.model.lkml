@@ -8,6 +8,18 @@ datagroup: cm_tamai_naracrime_default_datagroup {
 
 persist_with: cm_tamai_naracrime_default_datagroup
 
+test: id_is_unique {
+  explore_source: extend_base {
+    column: record_id {}
+    column: count {}
+    sorts: [extend_base.count: desc]
+    limit: 1
+  }
+  assert: id_is_unique {
+    expression: ${extend_base.count} = 1 ;;
+  }
+}
+
 explore: basic_info {
   label: "奈良県犯罪情報（基本）"
 }
