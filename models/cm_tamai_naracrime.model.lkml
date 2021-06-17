@@ -9,14 +9,14 @@ datagroup: cm_tamai_naracrime_default_datagroup {
 persist_with: cm_tamai_naracrime_default_datagroup
 
 test: id_is_unique {
-  explore_source: extend_base {
+  explore_source: basic_info {
     column: record_id {}
     column: count {}
-    sorts: [extend_base.count: desc]
+    sorts: [basic_info.count: desc]
     limit: 1
   }
   assert: id_is_unique {
-    expression: ${extend_base.count} = 1 ;;
+    expression: ${basic_info.count} = 1 ;;
   }
 }
 
