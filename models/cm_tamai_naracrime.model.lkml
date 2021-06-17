@@ -16,7 +16,7 @@ test: id_is_unique {
     limit: 1
   }
   assert: id_is_unique {
-    expression: ${basic_info.count} = 1 ;;
+    expression: ${basic_info.count} <> 1 ;;
   }
 }
 
